@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMMO - Nicolò Bedetti</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#080808',
+                        textMain: '#EAEAEA',
+                        textMuted: '#888888',
+                        accent: '#ffffff'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+            <a href="index.html" class="font-syne font-extrabold text-2xl tracking-tighter cursor-pointer nav-logo hover-target">
+                NB
+            </a>
+            <div class="hidden md:flex gap-10 text-xs font-medium tracking-[0.1em] text-textMuted uppercase nav-links">
+                <a href="index.html#projects" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">
+                    Projects
+                </a>
+                <a href="index.html#about" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">
+                    About
+                </a>
+                <a href="index.html#contact" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">
+                    Contact
+                </a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-textMain nav-links hover-target">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <!-- Project Hero -->
+        <section class="relative h-screen w-full flex items-end pb-24 lg:pb-32 overflow-hidden bg-[#111]">
+            <!-- Hero Image Placeholder -->
+            <div class="absolute inset-0 z-0">
+                <img src="img/mimmo/hero.png" alt="Mimmo Hero" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
+            </div>
+            
+            <div class="max-w-screen-2xl mx-auto w-full px-6 md:px-12 relative z-10 hero-title-container">
+                <div class="mb-4 overflow-hidden">
+                    <span class="inline-block text-[10px] tracking-[0.4em] text-white/70 uppercase font-semibold hero-tag">2022-2023 | Ecomuseum of Marsh Herbs & Grevi Mode Hats</span>
+                </div>
+                <div class="overflow-hidden mb-6">
+                    <h1 class="font-syne font-extrabold text-5xl md:text-7xl lg:text-[7rem] leading-[0.95] tracking-tight uppercase text-white hero-title">
+                        MIMMO
+                    </h1>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="font-inter text-xl md:text-3xl text-neutral-300 font-light hero-subtitle">
+                        From Fiber to Function: A 2.0 beach umbrella
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="py-24 md:py-32 bg-[#080808] border-t border-white/5">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <!-- Project Details -->
+                <div class="lg:col-span-4 space-y-10">
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Project Type</h4>
+                        <p class="font-inter text-white text-sm">Academic project<br>Product Design Lab B (Group project)<br>University of Ferrara</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Key Feature</h4>
+                        <p class="font-inter text-white text-sm">Wind-rotating mechanism, reducing the need for lifeguards to close it during gusty conditions.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Transport</h4>
+                        <p class="font-inter text-white text-sm">Easy to dismantle for convenient transport. Screw-in base.</p>
+                    </div>
+                </div>
+                
+                <!-- Project Description -->
+                <div class="lg:col-span-8">
+                    <h3 class="font-syne text-3xl md:text-4xl font-bold mb-8 text-white">An innovative, full-scale beach umbrella designed for multifunctionality and sustainability.</h3>
+                    <div class="font-inter text-textMuted text-lg font-light leading-relaxed space-y-6">
+                        <p>
+                            Mimmo is an innovative, full-scale beach umbrella designed to meet specific user needs through a multifunctional and sustainable approach. It is easy to dismantle for convenient transport and features a screw-in base, making it suitable for both public beaches and private beach clubs, where it offers a curious and modern alternative to traditional umbrellas.
+                        </p>
+                        <p>
+                            A key element of Mimmo is its ability to rotate with strong winds, reducing the need for lifeguards to close it during gusty conditions. It embraces a sustainable approach, taking natural fibers to a new level of function and aesthetic appeal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Technicals -->
+        <section class="pb-32 bg-[#080808]">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 space-y-8">
+                
+                <!-- Full Width Render -->
+                <img src="img/mimmo/lifestyle.png" alt="Mimmo on the beach" class="w-full aspect-[21/9] bg-neutral-900 rounded-3xl object-cover border border-white/5">
+
+                <!-- Image Grid: Details & Sketches -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <img src="img/mimmo/sketch.png" alt="Mimmo Concept Sketches" class="w-full aspect-square md:aspect-auto h-full bg-[#E5E5E5] rounded-3xl object-contain p-4 border border-white/5">
+                    <img src="img/mimmo/detail.png" alt="Material Detail" class="w-full aspect-square md:aspect-auto h-full bg-neutral-900 rounded-3xl object-cover border border-white/5">
+                    <img src="img/mimmo/angled.png" alt="Mimmo Angled View" class="w-full aspect-square md:aspect-auto h-full bg-neutral-900 rounded-3xl object-cover border border-white/5">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Tech Drawing -->
+                    <div class="w-full aspect-[4/3] bg-neutral-900 rounded-3xl overflow-hidden flex flex-col border border-white/5 relative">
+                        <img src="img/mimmo/technical.png" alt="Technical View" class="absolute inset-0 w-full h-full object-contain p-8 z-0 bg-[#E5E5E5]">
+                    </div>
+                    
+                    <!-- User Manual -->
+                    <div class="w-full aspect-[4/3] bg-neutral-900 rounded-3xl overflow-hidden flex flex-col border border-white/5 relative">
+                        <img src="img/mimmo/manual.png" alt="User Manual" class="absolute inset-0 w-full h-full object-contain p-8 z-0 bg-[#E5E5E5]">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Next Project Banner -->
+        <a href="index.html#projects" class="block w-full py-24 bg-white hover:bg-neutral-200 transition-colors duration-500 text-center hover-target group border-t border-white/5">
+            <span class="text-[10px] tracking-[0.4em] text-neutral-500 uppercase font-semibold mb-4 block">Back to</span>
+            <h2 class="font-syne text-5xl md:text-7xl font-extrabold text-black uppercase tracking-tight flex items-center justify-center gap-6">
+                PORTFOLIO
+                <i data-lucide="arrow-up-right" class="w-12 h-12 transform group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500"></i>
+            </h2>
+        </a>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="py-32 relative z-10 bg-black flex flex-col items-center justify-center text-center">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
+            <span class="text-[10px] tracking-[0.4em] text-textMuted uppercase font-semibold mb-8">Ready to collaborate?</span>
+            
+            <a href="mailto:bedettinicolo@gmail.com" class="group relative inline-block mb-32 hover-target max-w-full">
+                <h2 class="font-syne text-[8vw] md:text-[6vw] lg:text-[4.5rem] xl:text-[5.5rem] font-extrabold tracking-tight text-white transition-colors duration-300 break-all sm:break-normal">
+                    bedettinicolo@gmail.com
+                </h2>
+                <!-- Hover underline -->
+                <span class="absolute -bottom-2 sm:-bottom-4 left-1/2 w-0 h-[2px] bg-white transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:w-full group-hover:left-0"></span>
+            </a>
+            
+            <div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="font-inter text-xs text-textMuted tracking-widest uppercase">
+                    &copy; 2026 Nicolò Bedetti. All rights reserved.
+                </p>
+                
+                <div class="flex gap-10 font-inter text-xs tracking-[0.2em] uppercase font-medium text-textMuted">
+                    <a href="https://linkedin.com/in/nicolo-bedetti" target="_blank" class="hover:text-white transition-colors duration-300 hover-target">LinkedIn</a>
+                    <a href="https://instagram.com/nicoobedo" target="_blank" class="hover:text-white transition-colors duration-300 hover-target">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 hidden md:block backdrop-invert-[0.1]"></div>
+
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Specific Project Page Entrance Animation
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof gsap !== 'undefined') {
+                const projectTl = gsap.timeline({ defaults: { ease: "power4.out" } });
+                gsap.set(".hero-tag, .hero-title, .hero-subtitle", { y: 50, opacity: 0 });
+                
+                projectTl.to(".hero-tag", { y: 0, opacity: 1, duration: 1, delay: 0.2 })
+                         .to(".hero-title", { y: 0, opacity: 1, duration: 1.2 }, "-=0.8")
+                         .to(".hero-subtitle", { y: 0, opacity: 1, duration: 1 }, "-=0.9");
+            }
+        });
+    </script>
+</body>
+</html>

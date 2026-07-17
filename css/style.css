@@ -1,0 +1,55 @@
+body {
+    background-color: #080808;
+    color: #EAEAEA;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom selection color */
+::selection {
+    background: rgba(255, 255, 255, 0.99);
+    color: #080808;
+}
+
+.glass-nav {
+    background: rgba(8, 8, 8, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.mockup-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+    background: #111;
+}
+
+.mockup-overlay {
+    background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0) 60%);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    opacity: 0; /* for GSAP */
+}
+
+.text-glow {
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+/* Hide default cursor on desktop where custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, .cursor-pointer {
+        cursor: none !important;
+    }
+}
