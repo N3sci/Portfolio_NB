@@ -164,6 +164,59 @@
             </div>
         </section>
 
+        <!-- Part 1.5: Zanotta Objects Horizontal Marquee -->
+        <section class="w-full py-24 bg-[#0a0a0a] overflow-hidden border-t border-white/5">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 mb-12 bento-header">
+                <h2 class="font-syne text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">I PRODOTTI ZANOTTA</h2>
+                <p class="text-white/50 max-w-2xl font-light text-sm leading-relaxed">
+                    Sette oggetti iconici, scelti per la loro natura inclassificabile, esposti come opere d'arte all'interno dei cilindri autonomi.
+                </p>
+            </div>
+            
+            <!-- Horizontal scrolling flex container -->
+            <div class="w-full overflow-x-auto pb-8 hide-scrollbar cursor-ew-resize">
+                <div class="flex gap-6 px-6 md:px-12 w-max">
+                    <!-- Zanotta Items -->
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-1.png" alt="Zanotta Object 1" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Sacco</span></div>
+                    </div>
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-2.png" alt="Zanotta Object 2" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Mezzadro</span></div>
+                    </div>
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-3.png" alt="Zanotta Object 3" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Albero</span></div>
+                    </div>
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-4.png" alt="Zanotta Object 4" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Sgabillo</span></div>
+                    </div>
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-5.png" alt="Zanotta Object 5" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Joy</span></div>
+                    </div>
+                    <div class="w-[280px] h-[400px] relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] group flex-shrink-0 bento-item">
+                        <img src="img/oltre/zanotta-6.png" alt="Zanotta Object 6" class="absolute inset-0 w-full h-full object-contain p-8 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6"><span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/50">Sciangai</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll indicator for carousel -->
+            <div class="flex items-center gap-2 justify-center mt-6 text-white/30 text-[10px] tracking-[0.2em] uppercase">
+                <i data-lucide="arrow-left" class="w-3 h-3"></i>
+                Scorri per esplorare
+                <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </div>
+        </section>
+
         <!-- Part 2: Exhibition Logic & Lighting (Bento Layout) -->
         <section class="w-full py-24 bg-[#050505] border-y border-white/5 relative overflow-hidden">
             <!-- Decorative blurred background -->
@@ -219,27 +272,36 @@
             </div>
         </section>
 
-        <!-- Part 3: Photo Gallery -->
-        <section class="w-full py-24 border-t border-white/5 bg-[#0a0a0a]">
-            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <!-- Part 3: Architectural Blueprints -->
+        <section class="w-full py-32 bg-[#e5e5e5] border-t border-white/5 relative overflow-hidden text-black">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
                 <div class="text-center mb-16 bento-header">
-                    <h2 class="font-syne text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">GALLERIA FOTOGRAFICA</h2>
-                    <p class="text-white/50 max-w-2xl mx-auto font-light text-sm leading-relaxed">
-                        Esplora ulteriori dettagli e scorci dell'allestimento immersivo.
+                    <h2 class="font-syne text-4xl md:text-5xl font-bold tracking-tight text-black mb-6">ARCHITECTURAL BLUEPRINTS</h2>
+                    <p class="text-black/60 max-w-2xl mx-auto font-medium text-sm leading-relaxed">
+                        Prospetti, sezioni e disegni tecnici che illustrano la complessità strutturale e le quote dell'allestimento all'interno del teatro.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] aspect-square group bento-item">
-                        <img src="img/oltre/gallery-1.png" alt="Gallery 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Blueprint 1 -->
+                    <div class="relative rounded-sm overflow-hidden bg-white p-4 shadow-xl border border-black/10 group bento-item">
+                        <img src="img/oltre/blueprint-1.png" alt="Technical Blueprint 1" class="w-full h-auto object-contain mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] aspect-square group bento-item">
-                        <img src="img/oltre/gallery-2.png" alt="Gallery 2" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-[#080808] aspect-square group bento-item md:col-span-2 lg:col-span-1">
-                        <img src="img/oltre/gallery-3.png" alt="Gallery 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    <!-- Blueprint 2 -->
+                    <div class="relative rounded-sm overflow-hidden bg-white p-4 shadow-xl border border-black/10 group bento-item">
+                        <img src="img/oltre/blueprint-2.png" alt="Technical Blueprint 2" class="w-full h-auto object-contain mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Part 4: The Grand Finale -->
+        <section class="w-full h-[70vh] md:h-[90vh] relative bg-black overflow-hidden group">
+            <img src="img/oltre/finale.png" alt="The Grand Finale" class="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-[10s] ease-out group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/20 to-transparent z-10"></div>
+            
+            <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+                <h2 class="font-syne text-5xl md:text-8xl font-bold text-white/10 uppercase tracking-tighter mix-blend-overlay">Oltre La Soglia</h2>
             </div>
         </section>
 
