@@ -155,48 +155,51 @@
 
     </main>
 
-    <!-- Prossimo Progetto Section -->
-    <section class="py-24 border-t border-white/5 bg-[#0a0a0a]">
-        <div class="max-w-screen-xl mx-auto px-6 md:px-12 text-center">
-            <a href="oltre.html" class="inline-block group hover-target">
-                <p class="text-xs tracking-[0.2em] text-white/50 mb-4 uppercase">Prossimo Progetto</p>
-                <h2 class="font-syne text-4xl sm:text-5xl md:text-7xl font-bold break-words text-white mb-8 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/50 transition-all duration-500">
-                    Oltre La Soglia
-                </h2>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center mx-auto group-hover:border-white transition-colors duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform duration-300">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </div>
-            </a>
-        </div>
-    </section>
+            <!-- Prossimo Progetto Banner -->
+        <a href="oltre.html"
+            class="block w-full py-24 bg-white hover:bg-neutral-200 transition-colors duration-500 text-center hover-target group border-t border-white/5">
+            <span class="text-[10px] tracking-[0.4em] text-neutral-500 uppercase font-semibold mb-4 block">Prossimo Progetto</span>
+            <h2
+                class="font-syne text-4xl sm:text-5xl md:text-7xl font-extrabold text-black uppercase tracking-tight flex flex-col md:flex-row items-center justify-center gap-6 break-words">
+                Oltre La Soglia
+                <i data-lucide="arrow-right"
+                    class="w-10 h-10 md:w-12 md:h-12 transform group-hover:translate-x-4 transition-transform duration-500"></i>
+            </h2>
+        </a>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="border-t border-white/10 bg-[#080808]">
         <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
             <p class="text-sm text-textMuted font-light">
                 © 2026 Nicolò Bedetti. All rights reserved.
             </p>
             <div class="flex gap-6">
-                <a href="#" class="text-textMuted hover:text-white transition-colors text-sm hover-target">LinkedIn</a>
-                <a href="#" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Instagram</a>
-                <a href="mailto:nicolo.bedetti@gmail.com" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Email</a>
+                <a href="https://linkedin.com/in/nicolo-bedetti" target="_blank" class="text-textMuted hover:text-white transition-colors text-sm hover-target">LinkedIn</a>
+                <a href="https://instagram.com/nicoobedo" target="_blank" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Instagram</a>
+                <a href="mailto:bedettinicolo@gmail.com" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Email</a>
             </div>
         </div>
     </footer>
 
     
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#080808] z-[100] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
-        <button id="mobile-menu-close" class="absolute top-8 right-6 md:right-12 text-white p-2">
+        <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#080808]/90 backdrop-blur-xl z-[100] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+        <button id="mobile-menu-close" class="absolute top-8 right-6 md:right-12 text-white p-2 hover:rotate-90 transition-transform duration-300">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
-        <div class="flex flex-col gap-10 text-center">
+        <div class="flex flex-col gap-10 text-center mb-12">
             <a href="../index.html#projects" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Progetti</a>
             <a href="../index.html#about" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Chi Sono</a>
             <a href="../index.html#contact" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Contatti</a>
+        </div>
+        
+        <div class="flex flex-col items-center gap-4 border-t border-white/10 pt-10 w-[80%] max-w-sm">
+            <span class="text-[10px] tracking-[0.4em] text-textMuted uppercase font-semibold">Social & Info</span>
+            <div class="flex gap-8 mt-2">
+                <a href="https://linkedin.com/in/nicolo-bedetti" target="_blank" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">LinkedIn</a>
+                <a href="https://instagram.com/nicoobedo" target="_blank" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">Insta</a>
+                <a href="mailto:bedettinicolo@gmail.com" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">Email</a>
+            </div>
         </div>
     </div>
     

@@ -131,6 +131,20 @@ document.addEventListener("DOMContentLoaded", () => {
         { y: "100%", duration: 1.5, repeat: -1, ease: "power2.inOut" }
     );
 
+    // Navbar scroll effect
+    const header = document.querySelector("nav");
+    if (header) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("bg-[#080808]/95", "backdrop-blur-md", "py-4", "border-b", "border-white/10");
+                header.classList.remove("py-6");
+            } else {
+                header.classList.remove("bg-[#080808]/95", "backdrop-blur-md", "py-4", "border-b", "border-white/10");
+                header.classList.add("py-6");
+            }
+        });
+    }
+
     // Register ScrollTrigger
     if (typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);

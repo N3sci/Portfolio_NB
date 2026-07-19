@@ -1,8 +1,9 @@
-body {
+html, body {
     background-color: #080808;
     color: #EAEAEA;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 /* Custom selection color */
