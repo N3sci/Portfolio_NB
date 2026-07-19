@@ -64,7 +64,7 @@
                 </a>
             </div>
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-textMain nav-links hover-target">
+            <button id="mobile-menu-toggle" class="md:hidden text-textMain nav-links hover-target z-[110]">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="overflow-hidden mb-6">
                     <h1
-                        class="font-syne font-extrabold text-5xl md:text-7xl lg:text-[7rem] leading-[0.95] tracking-tight uppercase text-white hero-title">
+                        class="font-syne font-extrabold text-5xl md:text-7xl lg:text-7xl 2xl:text-[7rem] leading-[0.95] tracking-tight uppercase text-white hero-title">
                         GHIANDA
                     </h1>
                 </div>
@@ -260,6 +260,19 @@
         </div>
     </footer>
 
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#080808] z-[100] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+        <button id="mobile-menu-close" class="absolute top-8 right-6 md:right-12 text-white p-2">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="flex flex-col gap-10 text-center">
+            <a href="../index.html#projects" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Progetti</a>
+            <a href="../index.html#about" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Chi Sono</a>
+            <a href="../index.html#contact" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Contatti</a>
+        </div>
+    </div>
+    
     <!-- Custom Cursor -->
     <div id="custom-cursor"
         class="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 hidden md:block backdrop-invert-[0.1]">

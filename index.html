@@ -69,7 +69,7 @@
                 </a>
             </div>
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-textMain nav-links">
+            <button id="mobile-menu-toggle" class="md:hidden text-textMain nav-links z-[110]">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -164,10 +164,10 @@
                     <p class="font-inter text-textMuted font-light max-w-sm text-sm leading-relaxed">Una selezione di progetti recenti di product e interior design.</p>
                 </div>
                 <!-- Bento Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
                     <!-- GHIANDA (Large) -->
                     <a href="projects/ghianda.html"
-                        class="block group relative md:col-span-2 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                        class="block group relative sm:col-span-2 lg:col-span-2 sm:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/ghianda/hero.png" alt="Ghianda"
                             class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
@@ -191,7 +191,7 @@
 
                     <!-- MIMMO (Vertical Medium) -->
                     <a href="projects/mimmo.html"
-                        class="block group relative md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                        class="block group relative sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-2 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/mimmo/hero.png" alt="Mimmo"
                             class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
@@ -215,7 +215,7 @@
 
                     <!-- OTTOMAN (Square) -->
                     <a href="projects/ottoman.html"
-                        class="block group relative md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                        class="block group relative sm:col-span-1 sm:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/ottoman/hero.png" alt="Ottoman"
                             class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
@@ -239,7 +239,7 @@
 
                     <!-- ZIR (Square) -->
                     <a href="projects/zir.html"
-                        class="block group relative md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                        class="block group relative sm:col-span-1 sm:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/zir/hero.png" alt="Zir"
                             class="absolute inset-0 w-full h-full object-cover object-[center_70%] z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
@@ -263,7 +263,7 @@
 
                     <!-- PICKUP (Square) -->
                     <a href="projects/pickup.html"
-                        class="block group relative md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                        class="block group relative sm:col-span-1 sm:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/pickup/hero.png" alt="Pickup"
                             class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div
@@ -287,7 +287,7 @@
                     </a>
 
                     <!-- OLTRE LA SOGLIA (Large) -->
-                    <a href="projects/oltre.html" class="block group relative md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
+                    <a href="projects/oltre.html" class="block group relative sm:col-span-2 lg:col-span-2 sm:row-span-1 rounded-3xl overflow-hidden border border-white/10 bg-[#080808] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] bento-item">
                         <img src="img/oltre/hero.png" alt="Oltre La Soglia" class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10">
                         </div>
@@ -451,6 +451,19 @@
         </div>
     </footer>
 
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#080808] z-[100] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+        <button id="mobile-menu-close" class="absolute top-8 right-6 md:right-12 text-white p-2">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="flex flex-col gap-10 text-center">
+            <a href="index.html#projects" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Progetti</a>
+            <a href="index.html#about" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Chi Sono</a>
+            <a href="index.html#contact" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Contatti</a>
+        </div>
+    </div>
+    
     <!-- Custom Cursor -->
     <div id="custom-cursor"
         class="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 hidden md:block backdrop-invert-[0.1]">

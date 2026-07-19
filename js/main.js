@@ -315,4 +315,40 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Initialize Canvas
     initWireframeCanvas();
+
+    // ----------------------------------------------------
+    // Mobile Menu Toggle
+    // ----------------------------------------------------
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (menuToggle && mobileMenu && menuClose) {
+        const openMenu = () => {
+            mobileMenu.classList.remove('pointer-events-none');
+            gsap.to(mobileMenu, { opacity: 1, duration: 0.5, ease: "power2.out" });
+            
+            // Stagger animation for links
+            gsap.fromTo(mobileNavLinks, 
+                { y: 30, opacity: 0 }, 
+                { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.2, ease: "power3.out" }
+            );
+        };
+
+        const closeMenu = () => {
+            gsap.to(mobileMenu, { opacity: 0, duration: 0.5, ease: "power2.out", onComplete: () => {
+                mobileMenu.classList.add('pointer-events-none');
+            }});
+        };
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+
+        // Close menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
 });
