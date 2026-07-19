@@ -360,7 +360,20 @@
     <!-- GSAP & Main JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Specific Project Page Entrance Animation
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof gsap !== 'undefined') {
+                const projectTl = gsap.timeline({ defaults: { ease: "power4.out" } });
+                gsap.set(".hero-tag, .hero-title, .hero-subtitle", { y: 50, opacity: 0 });
+
+                projectTl.to(".hero-tag", { y: 0, opacity: 1, duration: 1, delay: 0.2 })
+                    .to(".hero-title", { y: 0, opacity: 1, duration: 1.2 }, "-=0.8")
+                    .to(".hero-subtitle", { y: 0, opacity: 1, duration: 1 }, "-=0.9");
+            }
+        });
+    </script>
 </body>
 
 </html>
