@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Mano A Mano — Nicolò Bedetti | Product Designer</title>
+    <meta name="description" content="A Mano A Mano - Interior design project for an intergenerational space. Bachelor thesis by Nicolò Bedetti, University of Ferrara.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { deepBlack: '#080808', textMain: '#EAEAEA', textMuted: '#888888', accent: '#ffffff' }, fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+            <a href="../index.html" class="font-syne font-extrabold text-2xl tracking-tighter cursor-pointer nav-logo hover-target">NB</a>
+            <div class="hidden md:flex gap-10 text-xs font-medium tracking-[0.1em] text-textMuted uppercase nav-links">
+                <a href="../index.html#projects" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">Projects</a>
+                <a href="../index.html#about" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">About</a>
+                <a href="../index.html#contact" class="hover:text-textMain transition-colors duration-300 relative group py-1 hover-target">Contact</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden text-textMain nav-links hover-target z-[110]">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <section class="relative h-screen w-full flex items-end pb-24 lg:pb-32 overflow-hidden bg-[#111]">
+            <div class="absolute inset-0 z-0">
+                <img src="../img/amano/hero.png" alt="A Mano A Mano Intergenerational Space" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
+            </div>
+            <div class="max-w-screen-2xl mx-auto w-full px-6 md:px-12 relative z-10 hero-title-container">
+                <div class="mb-4 overflow-hidden">
+                    <span class="inline-block text-[10px] tracking-[0.4em] text-white/70 uppercase font-semibold hero-tag">2023–2024 | Bachelor's Thesis | University of Ferrara</span>
+                </div>
+                <div class="overflow-hidden mb-6">
+                    <h1 class="font-syne font-extrabold text-5xl md:text-7xl lg:text-7xl 2xl:text-[7rem] leading-[0.95] tracking-tight uppercase text-white hero-title">A MANO<br>A MANO</h1>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="font-inter text-xl md:text-3xl text-neutral-300 font-light hero-subtitle">Interior design for an intergenerational space — Rimini</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-[#080808] border-t border-white/5">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4 space-y-10">
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Project Type</h4>
+                        <p class="font-inter text-white text-sm">Bachelor's Thesis<br>Final Design Studio<br>Product & Interior Design</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Location</h4>
+                        <p class="font-inter text-white text-sm">Unife Elderly Social Center<br>"L'incontro" – Rimini</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Target Users</h4>
+                        <p class="font-inter text-white text-sm">Over 65 (34.5% of Italy in 2050)<br>Adults 14–64 (54.3%)<br>Children under 14 (11.2%)</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Role</h4>
+                        <p class="font-inter text-white text-sm">Co-Designer<br>Research, Sketching<br>3D Modeling & Prototyping</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] tracking-[0.3em] uppercase text-textMuted mb-2 font-semibold">Supervisors</h4>
+                        <p class="font-inter text-white text-sm">Dario Scodeller<br>Michele Marchi (Co-supervisor)</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-8">
+                    <h3 class="font-syne text-3xl md:text-4xl font-bold mb-8 text-white">Connecting generations through creativity, play, and shared doing.</h3>
+                    <div class="font-inter text-textMuted text-lg font-light leading-relaxed space-y-6">
+                        <p>A Mano A Mano is an interior design project developed as a thesis in the final design studio for Product and Interior Design. The project responds to a pressing social issue: in Italy, 70% of elderly people do not participate in group activities, and 2 out of 10 have no contact with other people during a typical week. By 2050, over 34.5% of the Italian population will be over 65.</p>
+                        <p>The goal is to create interior design solutions and organize services that involve and connect different users — primarily the elderly (Over 65) and children — through the central theme of "doing": creativity, play, storytelling, and discovery, activities that are natural bridges between generations.</p>
+                        <p><strong>Research phase:</strong> The project was grounded in extensive field research at leading intergenerational centers: Reggio Children (Malaguzzi Center), ArcaLab in Florence, Hotel Adda in Paderno d'Adda, and ABI Piacenza. This direct contact shaped every design decision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#060606] border-t border-white/5">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+                <h3 class="font-syne text-2xl md:text-3xl font-bold text-white mb-12 uppercase tracking-wider">The Three Ateliers</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-neutral-900/50 rounded-3xl p-8 border border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-6">
+                            <i data-lucide="wind" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <h4 class="font-syne text-xl font-bold text-white mb-3">Wind Atelier</h4>
+                        <p class="font-inter text-textMuted text-sm leading-relaxed">Inspired by the Adriatic winds of Romagna. A space for kite-making, textile work, and light-material crafting — activities that connect the feeling of outdoor freedom with indoor creativity.</p>
+                    </div>
+                    <div class="bg-neutral-900/50 rounded-3xl p-8 border border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-6">
+                            <i data-lucide="eye" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <h4 class="font-syne text-xl font-bold text-white mb-3">Adriatic Observatory</h4>
+                        <p class="font-inter text-textMuted text-sm leading-relaxed">Reflecting Rimini's relationship with the sea. A contemplative space for storytelling, map exploration, and observational activities, designed to stimulate memory and imagination across generations.</p>
+                    </div>
+                    <div class="bg-neutral-900/50 rounded-3xl p-8 border border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-6">
+                            <i data-lucide="palette" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <h4 class="font-syne text-xl font-bold text-white mb-3">Creative Lab</h4>
+                        <p class="font-inter text-textMuted text-sm leading-relaxed">A hands-on workshop for material exploration, painting, and sculpture. Shared tables and dedicated spaces encourage parallel yet connected activity between elderly participants and children.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-32 bg-[#080808]">
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 space-y-8">
+                <div class="w-full aspect-[21/9] bg-neutral-900 rounded-3xl overflow-hidden border border-white/5 relative">
+                    <img src="../img/amano/render.png" alt="A Mano A Mano Interior Render" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <img src="../img/amano/sketch.png" alt="Field Test & Sketches" class="w-full aspect-square md:aspect-auto h-full bg-neutral-900 rounded-3xl object-cover border border-white/5">
+                    <img src="../img/amano/ergonomics.png" alt="Ergonomic Study" class="w-full aspect-square md:aspect-auto h-full bg-neutral-900 rounded-3xl object-cover border border-white/5">
+                    <img src="../img/amano/prototype.png" alt="Furniture Prototype" class="w-full aspect-square md:aspect-auto h-full bg-neutral-900 rounded-3xl object-cover border border-white/5">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="w-full aspect-square bg-neutral-900 rounded-3xl overflow-hidden flex flex-col p-8 border border-white/5 relative">
+                        <img src="../img/amano/technical.png" alt="Technical Specifications" class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#080808] to-transparent z-0 opacity-80"></div>
+                        <div class="relative z-10 mt-auto bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                            <h4 class="font-syne font-bold text-white mb-4">Design Principles</h4>
+                            <ul class="font-inter text-xs text-textMuted space-y-2">
+                                <li>Shared common tables & dedicated personal spaces</li>
+                                <li>Leftover materials collection & reuse</li>
+                                <li>Ergonomic study of seating for elderly & children</li>
+                                <li>Lightweight tables, chairs, and modular shelves</li>
+                                <li>Designed for proximity & shared activity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full aspect-square bg-neutral-900 rounded-3xl overflow-hidden flex flex-col p-8 border border-white/5 relative">
+                        <img src="../img/amano/field.png" alt="Field Research" class="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-50">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#080808] to-transparent z-0 opacity-80"></div>
+                        <div class="relative z-10 mt-auto bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                            <h4 class="font-syne font-bold text-white mb-2">Field Research</h4>
+                            <p class="font-inter text-xs text-textMuted leading-relaxed">Research was conducted at four leading centers: Reggio Children (Malaguzzi), ArcaLab Florence, Hotel Adda Paderno d'Adda, and ABI Piacenza. Direct observation and interviews informed every design choice from spatial layout to furniture ergonomics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="../index.html#projects" class="block w-full py-24 bg-white hover:bg-neutral-200 transition-colors duration-500 text-center hover-target group border-t border-white/5">
+            <span class="text-[10px] tracking-[0.4em] text-neutral-500 uppercase font-semibold mb-4 block">Fine del Tour</span>
+            <h2 class="font-syne text-4xl sm:text-5xl md:text-7xl font-extrabold text-black uppercase tracking-tight flex flex-col md:flex-row items-center justify-center gap-6 break-words">
+                TORNA ALLA HOME
+                <i data-lucide="home" class="w-10 h-10 md:w-12 md:h-12 transform group-hover:translate-x-4 transition-transform duration-500"></i>
+            </h2>
+        </a>
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#080808]">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-textMuted font-light">© 2026 Nicolò Bedetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="https://linkedin.com/in/nicolo-bedetti" target="_blank" class="text-textMuted hover:text-white transition-colors text-sm hover-target">LinkedIn</a>
+                <a href="https://instagram.com/nicoobedo" target="_blank" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Instagram</a>
+                <a href="mailto:bedettinicolo@gmail.com" class="text-textMuted hover:text-white transition-colors text-sm hover-target">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#080808]/90 backdrop-blur-xl z-[100] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+        <button id="mobile-menu-close" class="absolute top-8 right-6 md:right-12 text-white p-2 hover:rotate-90 transition-transform duration-300"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <div class="flex flex-col gap-10 text-center mb-12">
+            <a href="../index.html#projects" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Progetti</a>
+            <a href="../index.html#about" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Chi Sono</a>
+            <a href="../index.html#contact" class="mobile-nav-link font-syne text-4xl text-white uppercase tracking-wider hover-target">Contatti</a>
+        </div>
+        <div class="flex flex-col items-center gap-4 border-t border-white/10 pt-10 w-[80%] max-w-sm">
+            <span class="text-[10px] tracking-[0.4em] text-textMuted uppercase font-semibold">Social & Info</span>
+            <div class="flex gap-8 mt-2">
+                <a href="https://linkedin.com/in/nicolo-bedetti" target="_blank" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">LinkedIn</a>
+                <a href="https://instagram.com/nicoobedo" target="_blank" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">Insta</a>
+                <a href="mailto:bedettinicolo@gmail.com" class="text-white/60 hover:text-white transition-colors text-xs font-inter tracking-[0.1em] uppercase hover-target">Email</a>
+            </div>
+        </div>
+    </div>
+    <div id="custom-cursor" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 hidden md:block backdrop-invert-[0.1]"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof gsap !== 'undefined') {
+                const projectTl = gsap.timeline({ defaults: { ease: "power4.out" } });
+                gsap.set(".hero-tag, .hero-title, .hero-subtitle", { y: 50, opacity: 0 });
+                projectTl.to(".hero-tag", { y: 0, opacity: 1, duration: 1, delay: 0.2 })
+                         .to(".hero-title", { y: 0, opacity: 1, duration: 1.2 }, "-=0.8")
+                         .to(".hero-subtitle", { y: 0, opacity: 1, duration: 1 }, "-=0.9");
+            }
+        });
+    </script>
+</body>
+</html>
