@@ -134,13 +134,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Navbar scroll effect
     const header = document.querySelector("nav");
     if (header) {
+        const innerDiv = header.querySelector('div');
         window.addEventListener("scroll", () => {
             if (window.scrollY > 50) {
-                header.classList.add("bg-[#080808]/95", "backdrop-blur-md", "py-4", "border-b", "border-white/10");
-                header.classList.remove("py-6");
+                header.style.background = 'rgba(8,8,8,0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.webkitBackdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+                if (innerDiv) { innerDiv.style.paddingTop = '14px'; innerDiv.style.paddingBottom = '14px'; }
             } else {
-                header.classList.remove("bg-[#080808]/95", "backdrop-blur-md", "py-4", "border-b", "border-white/10");
-                header.classList.add("py-6");
+                header.style.background = 'rgba(8,8,8,0.5)';
+                header.style.backdropFilter = 'blur(16px)';
+                header.style.webkitBackdropFilter = 'blur(16px)';
+                header.style.borderBottom = '1px solid rgba(255,255,255,0.03)';
+                if (innerDiv) { innerDiv.style.paddingTop = ''; innerDiv.style.paddingBottom = ''; }
             }
         });
     }

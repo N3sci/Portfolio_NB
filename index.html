@@ -79,41 +79,40 @@
     <main class="flex-grow">
 
         <!-- Hero Section -->
-        <section class="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
-            <!-- Full bleed background image -->
+        <section class="relative h-screen min-h-[700px] w-full flex items-end overflow-hidden">
+            <!-- Full bleed background: personal photo -->
             <div class="absolute inset-0 z-0">
-                <img src="img/ghianda/single-chair.png" alt="Featured Project" class="absolute inset-0 w-full h-full object-cover z-0 hero-left">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
-                <div class="absolute inset-0 bg-black/40 z-10"></div>
+                <img src="img/profile.png" alt="Nicolò Bedetti" class="absolute inset-0 w-full h-full object-cover object-top z-0">
+                <!-- dark bottom for text legibility, subtle dark top so face/navbar blend -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/20 z-10"></div>
             </div>
-            
-            <div class="max-w-screen-2xl mx-auto w-full px-6 md:px-12 relative z-20 flex flex-col justify-center items-center text-center hero-right">
+
+            <!-- Text: bottom-left, magazine style -->
+            <div class="max-w-screen-2xl mx-auto w-full px-6 md:px-12 pb-20 md:pb-28 relative z-20 hero-right">
+                <div class="overflow-hidden mb-3">
+                    <span class="inline-block text-[10px] tracking-[0.4em] text-white/60 uppercase font-semibold hero-tag">Product Designer · Ferrara, Italy</span>
+                </div>
                 <div class="overflow-hidden mb-6">
-                    <h1 class="font-syne font-extrabold text-[11vw] md:text-[8vw] lg:text-[6rem] leading-[0.95] tracking-tight uppercase text-glow hero-title text-white">
-                        Progettare <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-white via-neutral-300 to-neutral-700">Benessere</span>
-                        <br />
-                        & Forma.
+                    <h1 class="font-syne font-extrabold text-[13vw] sm:text-[10vw] md:text-[7.5vw] lg:text-[6.5rem] leading-[0.92] tracking-tight uppercase text-white hero-title">
+                        Nicolò<br>Bedetti.
                     </h1>
                 </div>
-
-                <div class="overflow-hidden">
-                    <p class="font-inter text-lg md:text-2xl text-neutral-300 font-light max-w-2xl leading-relaxed hero-subtitle mx-auto">
-                        Nicolò Bedetti — Product Designer basato in Italia.<br />
-                        Creo oggetti che elevano la vita quotidiana attraverso significato, ergonomia e purezza estetica.
+                <div class="overflow-hidden mb-10 max-w-lg">
+                    <p class="font-inter text-base md:text-lg text-neutral-400 font-light leading-relaxed hero-subtitle">
+                        I design objects that elevate everyday life through meaning, ergonomics, and aesthetic purity.
                     </p>
                 </div>
 
-                <div class="mt-14 flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center hero-buttons w-full md:w-auto">
-                    <a href="#projects" class="group relative px-8 py-4 bg-white text-black font-medium text-xs tracking-wide uppercase rounded-full overflow-hidden transition-transform hover:scale-[1.02] duration-300 ease-out flex justify-center text-center">
+                <div class="flex flex-col sm:flex-row gap-4 hero-buttons">
+                    <a href="#projects" class="group relative px-8 py-4 bg-white text-black font-medium text-xs tracking-widest uppercase rounded-full overflow-hidden transition-transform hover:scale-[1.02] duration-300 ease-out flex items-center justify-center gap-3">
                         <span class="relative z-10 flex items-center gap-3">
-                            Esplora i Progetti
+                            Explore Projects
                             <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300"></i>
                         </span>
                     </a>
-                    <a href="projects/ghianda.html" class="group relative px-8 py-4 border border-white/40 text-white font-medium text-xs tracking-wide uppercase rounded-full overflow-hidden transition-all hover:bg-white/10 hover:border-white/80 duration-300 ease-out flex items-center justify-center text-center gap-3 bg-black/20 backdrop-blur-sm">
-                        <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-                        Inizia il Tour (Ghianda)
+                    <a href="#about" class="group relative px-8 py-4 border border-white/30 text-white font-medium text-xs tracking-widest uppercase rounded-full transition-all hover:bg-white/10 hover:border-white/60 duration-300 ease-out flex items-center justify-center gap-3 backdrop-blur-sm">
+                        About me
+                        <i data-lucide="user" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
@@ -126,6 +125,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Selected Works Section -->
         <section id="projects" class="py-24 md:py-32 relative z-10 bg-[#080808]">
