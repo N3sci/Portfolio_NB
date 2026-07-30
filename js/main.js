@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
     // Initial state setup for things that need to be hidden before animation
-    gsap.set(".hero-left", { x: -40, opacity: 0 });
+    gsap.set(".hero-left", { scale: 1.06, opacity: 0 });
     gsap.set(".hero-title", { y: 100 });
     gsap.set(".hero-subtitle", { y: 40, opacity: 0 });
     gsap.set(".hero-buttons", { y: 30, opacity: 0 });
@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: 0.2
     })
     .to(".hero-left", {
-        x: 0,
+        scale: 1,
         opacity: 1,
-        duration: 1.5,
-        ease: "expo.out"
+        duration: 2,
+        ease: "power2.out"
     }, "-=0.6")
     .to(".mockup-text-1", {
         y: 0,
@@ -371,5 +371,33 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener('click', closeMenu);
         });
     }
+
+    // ----------------------------------------------------
+    // Smooth Scroll for all anchor links
+    // ----------------------------------------------------
+    // Register ScrollToPlugin if available (part of GSAP Club, fallback to native)
+    if (typeof gsap !== 'undefined') {
+        try { gsap.registerPlugin(ScrollToPlugin); } catch(e) {}
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+
+            const navHeight = document.querySelector('nav')?.offsetHeight || 80;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight;
+
+            // Try GSAP ScrollToPlugin first, fall back to smooth native scroll
+            if (typeof ScrollToPlugin !== 'undefined') {
+                gsap.to(window, { scrollTo: { y: targetTop, autoKill: true }, duration: 1.2, ease: "expo.inOut" });
+            } else {
+                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+            }
+        });
+    });
 
 });

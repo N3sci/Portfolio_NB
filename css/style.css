@@ -4,6 +4,7 @@ html, body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 
 /* Custom selection color */
@@ -37,11 +38,17 @@ html, body {
     bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none;          /* hidden on mobile — no overlap with CTA */
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    opacity: 0; /* for GSAP */
+    opacity: 0;             /* for GSAP entrance animation */
+}
+
+@media (min-width: 768px) {
+    .scroll-indicator {
+        display: flex;      /* visible on desktop with full animation */
+    }
 }
 
 .text-glow {
@@ -64,4 +71,57 @@ html, body {
 
 .font-space {
     font-family: 'Space font', sans-serif;
+}
+/* Hero profile photo — responsive positioning */
+.hero-profile-img {
+    /* Mobile: shift focus point down ~15% to show face below fixed navbar */
+    object-position: 50% 15%;
+}
+
+@media (min-width: 768px) {
+    .hero-profile-img {
+        /* Desktop: anchor face to upper-left area, balanced with bottom-left text */
+        object-position: 30% 8%;
+    }
+}
+
+/* ─── GPU Compositing & Performance Hints ────────────────────────── */
+
+/* Force separate compositor layer for the hero video container.
+   Prevents layout jank during the GSAP scale animation. */
+.hero-left {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+/* Bento card hover transitions run on the GPU */
+.bento-item {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Smooth scroll-triggered section reveals */
+.section-header,
+.about-content,
+.about-skills {
+    will-change: transform, opacity;
+}
+
+/* Nav glass blur stays GPU-composited */
+.glass-nav {
+    will-change: backdrop-filter;
+    transform: translateZ(0);
+}
+
+/* Crisp rendering for WebP images */
+img {
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Video hero: prevent layout paint during playback */
+video {
+    transform: translateZ(0);
+    will-change: auto; /* let browser decide, avoids VRAM waste */
 }
