@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Smooth cursor follow using GSAP ticker
         gsap.ticker.add(() => {
-            // Lerp (linear interpolation) for smooth spring effect
-            cursorX += (mouseX - cursorX) * 0.15;
-            cursorY += (mouseY - cursorY) * 0.15;
+            // Lerp (linear interpolation) with higher responsiveness (0.35 instead of 0.15)
+            cursorX += (mouseX - cursorX) * 0.35;
+            cursorY += (mouseY - cursorY) * 0.35;
             
             gsap.set(cursor, {
                 x: cursorX,
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
         hoverTargets.forEach(target => {
             target.addEventListener("mouseenter", () => {
                 gsap.to(cursor, {
-                    scale: 2.5,
+                    scale: 2.2,
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    borderColor: "rgba(255, 255, 255, 0.2)",
-                    duration: 0.3,
+                    borderColor: "rgba(255, 255, 255, 0.25)",
+                    duration: 0.2,
                     ease: "power2.out"
                 });
             });
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     scale: 1,
                     backgroundColor: "transparent",
                     borderColor: "rgba(255, 255, 255, 0.5)",
-                    duration: 0.3,
+                    duration: 0.2,
                     ease: "power2.out"
                 });
             });
